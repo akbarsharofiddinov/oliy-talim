@@ -18,7 +18,7 @@ const Statistics: React.FC = () => {
           <div className="section-inner">
             <Swiper
               slidesPerView={4}
-              spaceBetween={120}
+              spaceBetween={60}
               modules={[Navigation]}
               
               autoplay={{

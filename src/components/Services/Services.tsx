@@ -1,6 +1,17 @@
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
-import { FcOrganization } from "react-icons/fc";
+import { BsFillPersonLinesFill, BsQuestionDiamondFill } from "react-icons/bs";
+import { FaBookReader, FaLaptopHouse } from "react-icons/fa";
+import {
+  FcAcceptDatabase,
+  FcApproval,
+  FcOrganization,
+  FcTodoList,
+} from "react-icons/fc";
+import { GoChecklist } from "react-icons/go";
+import { MdOutlineCalculate } from "react-icons/md";
+import { PiMedalLight, PiStudent } from "react-icons/pi";
+import { TbMailCheck } from "react-icons/tb";
 
 const Services: React.FC = () => {
   return (
@@ -12,44 +23,63 @@ const Services: React.FC = () => {
           </div>
           <div className="services-box">
             <a href="#" className="service-item">
-              <FcOrganization />
-              <span>Talabalar turar joylari haqida ma'lumot</span>
+              <FcApproval />
+              <span> Oliy ma'lumot haqida diplomni tasdiqlash</span>
             </a>
             <a href="#" className="service-item">
-              <AiOutlineMail />
+              <BsQuestionDiamondFill color="#f00" />
+              <span>Siz buni bilasizmi?</span>
+            </a>
+            <a href="#" className="service-item">
+              <BsFillPersonLinesFill color="#0d6efd" />
+              <span>Talabalik haqida ma'lumot olish</span>
+            </a>
+            <a href="#" className="service-item">
+              <FcTodoList />
               <span>
-                Nomdor stipendiayalar olish bo`yicha tanlovga ariza berish
+                Talabalarning moodle tizimida o'zlashtirish bo'yicha ma'lumot
               </span>
             </a>
             <a href="#" className="service-item">
-              <AiOutlineMail />
-              <span>Akademik ta`tildan chiqish uchun ariza berish</span>
+              <MdOutlineCalculate color="#5c9dff" />
+              <span>To'lov-kontrakt miqdorini aniqlash</span>
             </a>
             <a href="#" className="service-item">
-              <AiOutlineMail />
-              <span>Akademik ta`tilga qaytish uchun ariza berish</span>
+              <FcAcceptDatabase />
+              <span>Abiturientlar arizasizni elektron qabul qilish</span>
             </a>
             <a href="#" className="service-item">
-              <AiOutlineMail />
-              <span>Akademik ta`tildan chiqish uchun ariza berish</span>
+              <GoChecklist color="red" />
+              <span> Eng yaxshi pedagog tanloviga ariza berish</span>
             </a>
             <a href="#" className="service-item">
-              <AiOutlineMail />
+              <PiStudent color="green" />
+              <span>Akademik ta'tilga chiqish uchun ariza berish</span>
+            </a>
+            <a href="#" className="service-item">
+              <FaLaptopHouse color="blueviolet" />
+              <span>Masofaviy ta'lim tizimi</span>
+            </a>
+            <a href="#" className="service-item">
+              <PiMedalLight color="orange" />
               <span>
-                Nomdor stipendiayalar olish bo`yicha tanlovga ariza berish
+                Nomdor stipendiyalar olish bo'yicha tanlovga hujjatlarni
+                elektron taqdim qilish
               </span>
             </a>
             <a href="#" className="service-item">
-              <AiOutlineMail />
-              <span>Akademik ta`tildan chiqish uchun ariza berish</span>
+              <FaBookReader color="royalblue" />
+              <span>
+                Tayansh doktarantura va mustaqil izlanuvchilikka arizalarni
+                elektron berish
+              </span>
             </a>
             <a href="#" className="service-item">
-              <AiOutlineMail />
-              <span>Akademik ta`tilga qaytish uchun ariza berish</span>
-            </a>
-            <a href="#" className="service-item">
-              <AiOutlineMail />
-              <span>Akademik ta`tilga qaytish uchun ariza berish</span>
+              <TbMailCheck color="#5c9dff" />
+              <span>
+                Konferensiya va ilmiy jurnallarga maqolalarni elektron qabul
+                qilish
+              </span>
             </a>
           </div>
         </div>

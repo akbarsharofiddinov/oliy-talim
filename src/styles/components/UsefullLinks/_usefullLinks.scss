@@ -1,7 +1,16 @@
 .section-usefullLinks {
   background-color: #fff;
   padding: 60px 0;
-  margin: 80px 0;
+  margin: 0 !important;
+
+  &.educational {
+    background-color: transparent !important;
+    margin-bottom: 60px !important;
+  }
+
+  .section-title {
+    margin: 0 !important;
+  }
 
   .section-inner {
     position: relative;

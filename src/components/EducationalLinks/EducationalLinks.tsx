@@ -12,7 +12,7 @@ const EducationaLinks: React.FC = () => {
 
   return (
     <>
-      <section className="section-usefullLinks">
+      <section className="section-usefullLinks educational">
         <div className="container">
           <div className="section-title">
             <h3 className="title">ilmiy manbalar</h3>
