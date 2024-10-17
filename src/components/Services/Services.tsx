@@ -1,13 +1,7 @@
 import React from "react";
-import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill, BsQuestionDiamondFill } from "react-icons/bs";
 import { FaBookReader, FaLaptopHouse } from "react-icons/fa";
-import {
-  FcAcceptDatabase,
-  FcApproval,
-  FcOrganization,
-  FcTodoList,
-} from "react-icons/fc";
+import { FcAcceptDatabase, FcApproval, FcTodoList } from "react-icons/fc";
 import { GoChecklist } from "react-icons/go";
 import { MdOutlineCalculate } from "react-icons/md";
 import { PiMedalLight, PiStudent } from "react-icons/pi";
