@@ -1,0 +1,53 @@
+.gallery-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+
+  .gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      transition: background-color 0.8s;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      transition: background-color 0.8s;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      &::after {
+        background-color: transparent;
+      }
+
+      &::before {
+        background-color: #00000044;
+      }
+    }
+  }
+
+  .gallery-item:first-child {
+    grid-column: 1 / 2 span;
+  }
+}

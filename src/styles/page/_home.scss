@@ -1,0 +1,33 @@
+@import "../components/Banner/banner";
+@import "../components/News/news";
+@import "../components/OurSystems/out-systems";
+@import "../components/Gallery/gallery";
+
+.section-gallery {
+  background-color: #fff;
+  padding: 40px;
+  margin: 80px 0;
+
+  .section-inner {
+    display: flex;
+    gap: 60px;
+
+    & > div {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      .section-title {
+        .title {
+          font-size: 20px;
+        }
+
+        a {
+          color: #00000066;
+        }
+      }
+    }
+  }
+}
