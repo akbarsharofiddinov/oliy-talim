@@ -1,10 +1,14 @@
 import React from "react";
 import {
+  Announcements,
   Banner,
+  EducationalLinks,
   News,
   OurSystems,
   PhotoGallery,
   Services,
+  Statistics,
+  UseFullLinks,
   VideoGallery,
 } from "@/components";
 
@@ -22,7 +26,11 @@ const Home: React.FC = () => {
         </div>
       </section>
       <OurSystems />
+      <Announcements />
       <Services />
+      <Statistics />
+      <UseFullLinks />
+      <EducationalLinks />
     </>
   );
 };
