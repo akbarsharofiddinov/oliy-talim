@@ -21,7 +21,7 @@ const OurSystems: React.FC = () => {
                 Barcha tizimlar
               </MyButton>
             </div>
-            <div className="our-systems">
+            <div className="our-systems" data-aos="zoom-in">
               <a href="#" className="system-item">
                 <img src={hemis} alt="" />
                 Hemis axborot tizimi

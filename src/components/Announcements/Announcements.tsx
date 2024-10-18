@@ -22,6 +22,7 @@ const Announcements: React.FC = () => {
           </div>
           <div className="section-inner">
             <Swiper
+              data-aos="fade-left"
               slidesPerView={"auto"}
               spaceBetween={30}
               modules={[Navigation]}

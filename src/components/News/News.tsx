@@ -21,6 +21,7 @@ const News: React.FC = () => {
               <h4 className="title">so'nggi yangiliklar</h4>
             </div>
             <Swiper
+              data-aos="fade-left"
               slidesPerView={"auto"}
               spaceBetween={30}
               modules={[Navigation]}

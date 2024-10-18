@@ -20,7 +20,6 @@ const Statistics: React.FC = () => {
               slidesPerView={4}
               spaceBetween={60}
               modules={[Navigation]}
-              
               autoplay={{
                 delay: 3000,
               }}
@@ -41,28 +40,40 @@ const Statistics: React.FC = () => {
               }}
             >
               <SwiperSlide>
-                <h3>22</h3>
-                <p>Lorem, ipsum.</p>
+                <div data-aos="flip-left">
+                  <h3>22</h3>
+                  <p>Lorem, ipsum.</p>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>41</h3>
-                <p>Lorem, ipsum.</p>
+                <div data-aos="flip-left">
+                  <h3>41</h3>
+                  <p>Lorem, ipsum.</p>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>38</h3>
-                <p>Lorem, ipsum.</p>
+                <div data-aos="flip-left">
+                  <h3>38</h3>
+                  <p>Lorem, ipsum.</p>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>12</h3>
-                <p>Lorem, ipsum.</p>
+                <div data-aos="flip-left">
+                  <h3>12</h3>
+                  <p>Lorem, ipsum.</p>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>53</h3>
-                <p>Lorem, ipsum.</p>
+                <div data-aos="flip-left">
+                  <h3>53</h3>
+                  <p>Lorem, ipsum.</p>
+                </div>
               </SwiperSlide>
               <SwiperSlide>
-                <h3>34</h3>
-                <p>Lorem, ipsum.</p>
+                <div data-aos="flip-left">
+                  <h3>34</h3>
+                  <p>Lorem, ipsum.</p>
+                </div>
               </SwiperSlide>
             </Swiper>
             <div className="custom-navigation">

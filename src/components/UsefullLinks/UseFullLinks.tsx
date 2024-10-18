@@ -17,7 +17,11 @@ const UseFullLinks: React.FC = () => {
           <div className="section-title">
             <h3 className="title">foydali manbalar</h3>
           </div>
-          <div className="section-inner">
+          <div
+            className="section-inner"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
             <Swiper
               slidesPerView={4}
               modules={[Navigation]}

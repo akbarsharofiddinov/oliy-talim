@@ -22,19 +22,19 @@ const Footer: React.FC = () => {
               <ul className="menu">
                 <li className="menu-item">
                   <p>Telefon:</p>
-                  <a href="#"> +(99872) 226 13 57</a>
+                  <a href="tel:+998901234567"> +(99890) 123 45 67</a>
                 </li>
                 <li className="menu-item">
                   <p>Faks:</p>
-                  <a href="#"> +(99872) 226 13 57</a>
+                  <a href="tel:+998901234567"> +(99890) 123 45 67</a>
                 </li>
                 <li className="menu-item">
                   <p>E-mail:</p>
-                  <a href="#">info@jdpu.uz</a>
+                  <a href="meilto:info@jdpu.uz">info@jdpu.uz</a>
                 </li>
                 <li className="menu-item">
                   <p>E-mail:</p>
-                  <a href="#">jspi_info@umail.uz</a>
+                  <a href="meilto:jspi_info@umail.uz">jspi_info@umail.uz</a>
                 </li>
               </ul>
             </div>

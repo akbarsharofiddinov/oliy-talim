@@ -19,12 +19,20 @@
       margin-top: 40px;
 
       .swiper-slide {
-        border-right: 1px solid #ddd;
         display: grid;
         place-items: center;
         gap: 20px;
         cursor: pointer;
         padding: 0 40px;
+
+        &.swiper-slide-active,
+        &.swiper-slide-next {
+          border-right: 1px solid #ddd;
+        }
+
+        &.swiper-slide-next + .swiper-slide {
+          border-right: 1px solid #ddd;
+        }
       }
     }
 

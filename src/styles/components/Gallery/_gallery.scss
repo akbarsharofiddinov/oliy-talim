@@ -1,53 +1,115 @@
-.gallery-box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+.photoGallery,
+.videoGallery {
+  .section-title {
+    a {
+      transition: color 0.3s;
+      position: relative;
 
-  .gallery-item {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      transition: background-color 0.8s;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      transition: background-color 0.8s;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    &:hover {
       &::after {
-        background-color: transparent;
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0;
+        right: 0;
+        top: 105%;
+        background-color: $bs-blue;
+
+        transition: width 0.3s;
       }
 
-      &::before {
-        background-color: #00000044;
+      &:hover {
+        color: $light-blue !important;
+
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
 
-  .gallery-item:first-child {
-    grid-column: 1 / 2 span;
+  .gallery-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+
+      button.icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: grid;
+        place-items: center;
+        font-size: 50px;
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        cursor: pointer;
+        z-index: 20;
+
+        transition: opacity 0.4s, visibility 0.4s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        transition: background-color 0.8s;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        transition: background-color 0.8s;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      &:hover {
+        button.icon {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+
+        &::after {
+          background-color: transparent;
+        }
+
+        &::before {
+          background-color: #00000067;
+        }
+      }
+    }
+
+    .gallery-item:first-child {
+      grid-column: 1 / 2 span;
+
+      button.icon {
+        font-size: 80px;
+      }
+    }
   }
 }

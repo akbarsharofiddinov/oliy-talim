@@ -15,7 +15,7 @@ const Services: React.FC = () => {
           <div className="section-title">
             <h3 className="title">interaltiv xizmatlar</h3>
           </div>
-          <div className="services-box">
+          <div className="services-box" data-aos="zoom-in">
             <a href="#" className="service-item">
               <FcApproval />
               <span> Oliy ma'lumot haqida diplomni tasdiqlash</span>

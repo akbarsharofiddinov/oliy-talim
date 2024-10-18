@@ -1,8 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-console.log(initReactI18next);
-
 i18n
   .use(initReactI18next) // Connects i18next with React
   .init({

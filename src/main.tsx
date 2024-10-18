@@ -6,5 +6,8 @@ import "./translation/i18";
 // Import Swiper styles
 import "swiper/css";
 
+// Import AOS
+
+import "aos/dist/aos.css";
 
 createRoot(document.getElementById("root")!).render(<App />);

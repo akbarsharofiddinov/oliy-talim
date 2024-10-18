@@ -3,7 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperClass, NavigationOptions } from "swiper/types";
 
 // import required modules
-import { Autoplay, EffectCreative, Navigation, Pagination } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCreative,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/effect-creative";
 import "swiper/css/pagination";
@@ -18,7 +23,7 @@ const Banner: React.FC = () => {
   const nextRef = useRef<HTMLButtonElement | null>(null);
   return (
     <>
-      <section className="section-banner">
+      <section className="section-banner" data-aos="fade-up">
         <div className="container">
           <Swiper
             grabCursor={true}

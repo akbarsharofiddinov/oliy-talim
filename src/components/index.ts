@@ -16,3 +16,4 @@ export { default as VideoGallery } from "./Gallery/VideoGallery";
 // UI
 export { default as MyButton } from "./UI/Button";
 export { default as MySelect } from "./UI/Select";
+export { default as Modal } from "./UI/Modal";
