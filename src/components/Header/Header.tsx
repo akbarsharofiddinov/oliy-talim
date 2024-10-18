@@ -5,7 +5,16 @@ import logo from "@/images/logo/logo.png";
 import { MySelect } from "..";
 
 const Header: React.FC = () => {
-  const menu = ["item-1", "item-2", "item-3", "item-4"];
+  const menu = [
+    "item1",
+    "item2",
+    {
+      title: "Submenu",
+      innerMenu: ["subitem1", "subitem2"],
+    },
+    "item3",
+  ];
+
   return (
     <>
       <HeaderTop />
