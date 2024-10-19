@@ -1,10 +1,12 @@
 .select-item {
   position: relative;
 
-  border-right: 1px solid #ddd;
-
   &:last-child {
     border: none !important;
+  }
+
+  .menu {
+    z-index: 50;
   }
 
   & > .menu {

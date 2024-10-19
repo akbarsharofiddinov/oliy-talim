@@ -3,10 +3,9 @@
 
   .section-inner {
     .our-systems {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 335px));
+      justify-content: space-between;
 
       margin-top: 35px;
 

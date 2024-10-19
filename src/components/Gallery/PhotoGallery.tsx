@@ -21,7 +21,6 @@ const PhotoGallery: React.FC = () => {
               onClick={() => {
                 setModal(true);
                 setCurrentImage(gallery1);
-                console.log("first")
               }}
             >
               <TbPhoto />
@@ -34,7 +33,7 @@ const PhotoGallery: React.FC = () => {
               onClick={() => {
                 setModal(true);
                 setCurrentImage(gallery1);
-                console.log("first")
+                console.log("first");
               }}
             >
               <TbPhoto />
@@ -47,7 +46,7 @@ const PhotoGallery: React.FC = () => {
               onClick={() => {
                 setModal(true);
                 setCurrentImage(gallery1);
-                console.log("first")
+                console.log("first");
               }}
             >
               <TbPhoto />

@@ -24,6 +24,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 20px 0;
 
   .title {
     text-transform: uppercase;
@@ -42,3 +43,5 @@ section {
     }
   }
 }
+
+@import "./common/responsive";

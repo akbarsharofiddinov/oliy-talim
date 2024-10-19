@@ -30,6 +30,24 @@ const Announcements: React.FC = () => {
                 prevEl: prevRef.current,
                 nextEl: nextRef.current,
               }}
+              breakpoints={{
+                340: {
+                  slidesPerView: 1,
+                  spaceBetween: 5,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 6,
+                },
+                900: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              }}
               onSwiper={(swiper: SwiperClass) => {
                 setTimeout(() => {
                   if (
@@ -75,7 +93,7 @@ const Announcements: React.FC = () => {
               </SwiperSlide>
             </Swiper>
             <MyButton type="outlined">
-              <IoGridOutline fontSize={22} /> Barcha yangiliklar
+              <IoGridOutline /> Barcha yangiliklar
             </MyButton>
             <div className="custom-navigation">
               <button ref={prevRef} className="custom-prev">

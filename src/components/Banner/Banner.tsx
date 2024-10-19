@@ -75,10 +75,10 @@ const Banner: React.FC = () => {
           </Swiper>
           <div className="custom-navigation">
             <button ref={prevRef} className="custom-prev">
-              <FaArrowLeft size={24} />
+              <FaArrowLeft />
             </button>
             <button ref={nextRef} className="custom-next">
-              <FaArrowRight size={24} />
+              <FaArrowRight />
             </button>
           </div>
         </div>

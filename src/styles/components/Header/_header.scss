@@ -32,6 +32,19 @@ header {
       z-index: 5;
 
       flex: 80%;
+
+      &_item {
+        border-right: 1px solid #ddd;
+
+        &:last-child {
+          .select-item {
+            .inner-menu {
+              left: -100%;
+              top: 100%;
+            }
+          }
+        }
+      }
     }
   }
 }

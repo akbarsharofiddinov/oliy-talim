@@ -43,7 +43,6 @@
 
         .item {
           border-left: 2px solid #ddd;
-          padding: 7px 12px;
 
           &:nth-child(2) {
             border-left: none !important;
@@ -52,6 +51,7 @@
           a {
             text-transform: uppercase;
             color: #fff !important;
+            padding: 7px 12px;
           }
         }
       }

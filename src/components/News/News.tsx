@@ -16,15 +16,31 @@ const News: React.FC = () => {
     <>
       <section className="section-news">
         <div className="container">
+          <div className="section-title">
+            <h4 className="title">so'nggi yangiliklar</h4>
+          </div>
           <div className="section-inner">
-            <div className="section-title">
-              <h4 className="title">so'nggi yangiliklar</h4>
-            </div>
             <Swiper
               data-aos="fade-left"
-              slidesPerView={"auto"}
-              spaceBetween={30}
               modules={[Navigation]}
+              breakpoints={{
+                340: {
+                  slidesPerView: 1,
+                  spaceBetween: 5,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 6,
+                },
+                900: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                },
+              }}
               navigation={{
                 prevEl: prevRef.current,
                 nextEl: nextRef.current,
@@ -74,7 +90,7 @@ const News: React.FC = () => {
               </SwiperSlide>
             </Swiper>
             <MyButton type="outlined">
-              <IoGridOutline fontSize={22} /> Barcha yangiliklar
+              <IoGridOutline /> Barcha yangiliklar
             </MyButton>
             <div className="custom-navigation">
               <button ref={prevRef} className="custom-prev">

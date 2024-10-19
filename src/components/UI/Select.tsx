@@ -36,13 +36,13 @@ const Select: React.FC<IProps> = ({ title, menu }) => {
                       <FaAngleRight />
                     </span>
                   </div>
-                  <div className="menu inner-menu">
+                  <ul className="menu inner-menu">
                     {item.innerMenu.map((innerItem, index) => (
                       <li className="item inner-item" key={index}>
                         {innerItem}
                       </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               )}
             </li>

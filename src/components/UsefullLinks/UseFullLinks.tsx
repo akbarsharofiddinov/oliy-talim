@@ -23,10 +23,26 @@ const UseFullLinks: React.FC = () => {
             data-aos-duration="500"
           >
             <Swiper
-              slidesPerView={4}
               modules={[Navigation]}
               autoplay={{
                 delay: 3000,
+              }}
+              breakpoints={{
+                340: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1000: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+                1200: {
+                  slidesPerView: 4,
+                },
               }}
               onSwiper={(swiper: SwiperClass) => {
                 setTimeout(() => {
