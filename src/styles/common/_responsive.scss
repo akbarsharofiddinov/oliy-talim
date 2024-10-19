@@ -185,9 +185,27 @@
     }
   }
 
+  // Banner
+  .section-banner {
+    .custom-navigation {
+      button {
+        font-size: 12px !important;
+        padding: 4px !important;
+      }
+    }
+
+    .swiper {
+      .swiper-pagination-bullet {
+        width: 20px !important;
+        max-height: 4px !important;
+      }
+    }
+  }
+
   // Section news & Announcements
   .section-news,
   .section-announcements {
+    margin: 0 !important;
     .swiper-slide {
       flex-direction: row !important;
 
@@ -208,8 +226,23 @@
 
   // Section Gallery
   .section-gallery {
+    margin: 0 !important;
     .section-inner {
       flex-direction: column;
+    }
+  }
+
+  // Our Systems
+  .section-our_systems {
+    .our-systems {
+      justify-content: center !important;
+    }
+  }
+
+  // Services
+  .section-services {
+    .services-box {
+      justify-content: center !important;
     }
   }
 }
