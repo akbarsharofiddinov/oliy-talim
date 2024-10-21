@@ -46,5 +46,10 @@ header {
         }
       }
     }
+
+    .header-bar_close,
+    .header-bar {
+      display: none;
+    }
   }
 }

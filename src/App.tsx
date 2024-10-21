@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "@/components";
-import { Home } from "@/pages";
+import { AllNews, Home } from "@/pages";
 import Aos from "aos";
 
 const App: React.FC = () => {
@@ -13,6 +13,10 @@ const App: React.FC = () => {
         {
           path: "",
           element: <Home />,
+        },
+        {
+          path: "/news",
+          element: <AllNews />,
         },
       ],
     },

@@ -43,6 +43,7 @@
   header {
     .header-inner {
       .header-bar {
+        display: block;
         background-color: transparent;
         font-size: 30px;
         border: none;
@@ -75,6 +76,7 @@
         }
 
         .header-bar_close {
+          display: block;
           position: absolute;
           top: 20px;
           left: 15px;
