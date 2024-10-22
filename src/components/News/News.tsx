@@ -4,7 +4,6 @@ import NewsItem from "./NewsItem";
 
 import news1 from "@/images/news/news-1.jpg";
 import { IoGridOutline } from "react-icons/io5";
-import { MyButton } from "..";
 import { NavigationOptions } from "swiper/types";
 import { Navigation } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -89,9 +88,9 @@ const News: React.FC = () => {
                 <NewsItem img={news1} />
               </SwiperSlide>
             </Swiper>
-            <MyButton type="outlined">
+            <a href="/news">
               <IoGridOutline /> Barcha yangiliklar
-            </MyButton>
+            </a>
             <div className="custom-navigation">
               <button ref={prevRef} className="custom-prev">
                 <IoIosArrowBack size={24} />

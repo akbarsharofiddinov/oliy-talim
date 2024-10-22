@@ -53,17 +53,6 @@
   background-color: #fff !important;
   padding: 10px 0 30px;
 
-  .news-grid_box {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin: 40px 0;
-
-    .news-item {
-      @include newsItem();
-    }
-  }
-
   .section-inner {
     position: relative;
 
@@ -109,6 +98,24 @@
           cursor: not-allowed;
         }
       }
+    }
+  }
+}
+
+.all-news_page {
+  margin-top: 20px;
+  background-color: transparent !important;
+
+  .news-grid_box {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 40px 0 !important;
+    padding: 40px;
+    background-color: #fff;
+
+    .news-item {
+      @include newsItem();
     }
   }
 }
