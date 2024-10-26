@@ -1,21 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeaderTop from "./HeaderTop";
 
 import logo from "@/images/logo/logo.png";
-import { MySelect } from "..";
 import { FaBars } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+import { API } from "@/API";
+import { MySelect } from "..";
 
 const Header: React.FC = () => {
   const [headerBar, setHeaderBar] = useState(false);
-  const menu = [
-    "item1",
-    "item2",
-    {
-      title: "Submenu",
-      innerMenu: ["subitem1", "subitem2"],
-    },
-    "item3",
-  ];
+  const [headerMenu, setHeaderMenu] = useState<Menu[]>([]);
+
+  async function getMenus() {
+    try {
+      const response = await API.get("/menus");
+      if (response.status === 200) {
+        setHeaderMenu(response.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    getMenus();
+  }, []);
 
   return (
     <>
@@ -37,24 +46,25 @@ const Header: React.FC = () => {
               >
                 &times;
               </button>
-              <li className="header-menu_item">
-                <MySelect title="menu-1" menu={menu} />
-              </li>
-              <li className="header-menu_item">
-                <MySelect title="menu-2" menu={menu} />
-              </li>
-              <li className="header-menu_item">
-                <MySelect title="menu-3" menu={menu} />
-              </li>
-              <li className="header-menu_item">
-                <MySelect title="menu-4" menu={menu} />
-              </li>
-              <li className="header-menu_item">
-                <MySelect title="menu-5" menu={menu} />
-              </li>
-              <li className="header-menu_item">
-                <MySelect title="menu-6" menu={menu} />
-              </li>
+              {headerMenu.length ? (
+                <>
+                  {headerMenu.map((menuItem, index) => (
+                    <MySelect
+                      title={menuItem.name_uz}
+                      menu={menuItem.menu_items}
+                      key={index}
+                    />
+                  ))}
+                  <NavLink className="header-menu_link" to={"/news"}>
+                    Yangiliklar
+                  </NavLink>
+                  <NavLink className="header-menu_link" to={"/photos"}>
+                    Foto gallareya
+                  </NavLink>
+                </>
+              ) : (
+                ""
+              )}
             </ul>
             <button className="header-bar" onClick={() => setHeaderBar(true)}>
               <FaBars />

@@ -5,6 +5,12 @@
     border: none !important;
   }
 
+  & > .selected {
+    color: $bs-blue;
+    padding: 15px 20px;
+    border-right: 1px solid #ddd;
+  }
+
   .menu {
     z-index: 50;
   }
@@ -13,16 +19,15 @@
     padding-top: 15px;
     position: absolute;
     top: 100%;
-    left: 0%;
+    left: -50%;
     background-color: #fff;
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
-    min-width: 120px;
-    max-width: 400px !important;
-    width: 100% !important;
-
+    min-width: 300px;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+
+    transition: opacity 0.3s, visibility 0.3s;
 
     .select-item {
       position: relative;
@@ -68,11 +73,8 @@
       height: 4px;
     }
 
-    transition: opacity 0.3s, visibility 0.3s;
-
     .menu-item {
       padding: 12px;
-      text-transform: capitalize;
       cursor: pointer;
     }
   }

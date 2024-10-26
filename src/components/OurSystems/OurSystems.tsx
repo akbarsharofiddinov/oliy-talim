@@ -1,6 +1,5 @@
 import React from "react";
-import { MyButton } from "..";
-import { IoGridOutline } from "react-icons/io5";
+
 import { AiOutlineMail } from "react-icons/ai";
 
 import hemis from "@/images/our-systems/hemis.png";
@@ -16,10 +15,6 @@ const OurSystems: React.FC = () => {
           <div className="section-inner">
             <div className="section-title">
               <h3 className="title">bizning tizimlarimiz</h3>
-              <MyButton type="outlined">
-                <IoGridOutline fontSize={22} />
-                Barcha tizimlar
-              </MyButton>
             </div>
             <div className="our-systems" data-aos="zoom-in">
               <a href="#" className="system-item">

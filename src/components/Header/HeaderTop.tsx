@@ -14,57 +14,52 @@ const HeaderTop: React.FC = () => {
       <div className="header-top">
         <div className="container">
           <div className="header-top_inner">
-            
-              <ul className="menu left">
-                <li className="menu-item">
-                  <a href="#">
-                    <img src={uzFlag} alt="Uzbekistan flag" />
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a href="#">
-                    <img src={gerb} alt="Uzbekistan flag" />
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a href="#">
-                    <img src={qqFlag} alt="Uzbekistan flag" />
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a href="#">
-                    <img src={gerb} alt="Uzbekistan flag" />
-                  </a>
-                </li>
-              </ul>
-            
-              <ul className="menu right">
-                <li className="menu-item">
-                  <ul className="languages">
-                    <p>
-                      <BsGlobeAmericas />
-                    </p>
-                    <li className="item">
-                      <a href="#">o'zb</a>
-                    </li>
-                    <li className="item">
-                      <a href="#">рус</a>
-                    </li>
-                    <li className="item">
-                      <a href="#">eng</a>
-                    </li>
-                    <li className="item">
-                      <a href="#">qr</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="menu-item">
-                  <button className="search-btn">
-                    <CiSearch />
-                  </button>
-                </li>
-              </ul>
-            
+            <ul className="menu left">
+              <li className="menu-item">
+                <a href="#">
+                  <img src={uzFlag} alt="Uzbekistan flag" />
+                </a>
+              </li>
+              <li className="menu-item">
+                <a href="#">
+                  <img src={gerb} alt="Uzbekistan flag" />
+                </a>
+              </li>
+              <li className="menu-item">
+                <a href="#">
+                  <img src={qqFlag} alt="Uzbekistan flag" />
+                </a>
+              </li>
+              <li className="menu-item">
+                <a href="#">
+                  <img src={gerb} alt="Uzbekistan flag" />
+                </a>
+              </li>
+            </ul>
+
+            <ul className="menu right">
+              <li className="menu-item">
+                <ul className="languages">
+                  <p>
+                    <BsGlobeAmericas />
+                  </p>
+                  <li className="item">
+                    <a href="#">o'zb</a>
+                  </li>
+                  <li className="item">
+                    <a href="#">рус</a>
+                  </li>
+                  <li className="item">
+                    <a href="#">qr</a>
+                  </li>
+                </ul>
+              </li>
+              <li className="menu-item">
+                <button className="search-btn">
+                  <CiSearch />
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

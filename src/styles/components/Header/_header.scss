@@ -28,13 +28,31 @@ header {
       display: flex;
       align-items: center;
       justify-content: end;
-      gap: 15px;
       z-index: 5;
 
       flex: 80%;
 
-      &_item {
+      &_link {
         border-right: 1px solid #ddd;
+        color: $bs-blue;
+        padding: 15px 20px;
+
+        &.active {
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $bs-orange;
+
+            transition: width 0.4s;
+          }
+        }
 
         &:last-child {
           .select-item {

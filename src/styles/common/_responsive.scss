@@ -70,7 +70,28 @@
           transform: translateX(0);
         }
 
-        &_item {
+        .select-item {
+          .selected {
+            border: none !important;
+            padding: 12px !important;
+          }
+
+          .menu {
+            left: 100% !important;
+            top: 0;
+            transform: translateX(-40%);
+
+            transition: transform 0.4s, opacity 0.4s, visibility 0.4s ease;
+          }
+
+          &:hover {
+            .menu {
+              transform: translateX(0);
+            }
+          }
+        }
+
+        &_link {
           border: none !important;
           padding: 12px !important;
         }

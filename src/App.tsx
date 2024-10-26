@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "@/components";
-import { AllNews, Home } from "@/pages";
+import { AllNews, Home, PhotoGallery } from "@/pages";
 import Aos from "aos";
 
 const App: React.FC = () => {
@@ -17,6 +17,10 @@ const App: React.FC = () => {
         {
           path: "/news",
           element: <AllNews />,
+        },
+        {
+          path: "/photos",
+          element: <PhotoGallery />,
         },
       ],
     },

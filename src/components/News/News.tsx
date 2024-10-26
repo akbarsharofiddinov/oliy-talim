@@ -88,7 +88,7 @@ const News: React.FC = () => {
                 <NewsItem img={news1} />
               </SwiperSlide>
             </Swiper>
-            <a href="/news">
+            <a href="/news" id="all-news_link">
               <IoGridOutline /> Barcha yangiliklar
             </a>
             <div className="custom-navigation">
