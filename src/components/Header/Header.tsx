@@ -22,7 +22,10 @@ const Header: React.FC = () => {
           <div className="header-inner">
             <a href="/" className="logo">
               <img src={logo} alt="logo" />
-              <p>{t("logo-title")}</p>
+              <p>
+                O'zbekiston Respublikasi Oliy ta'lim, fan va innovatsiyalar
+                vazirligi
+              </p>
             </a>
 
             <div className="right">
