@@ -7,8 +7,23 @@ import gerb from "@/images/header-top/gerb.png";
 // Icons
 import { CiSearch } from "react-icons/ci";
 import { BsGlobeAmericas } from "react-icons/bs";
+import { useAppDispatch, useAppSelector } from "@/store/Hooks/hooks";
+import { setLanugage } from "@/store/Languages/languageSlice";
+import { useTranslation } from "react-i18next";
 
 const HeaderTop: React.FC = () => {
+  const dispatch = useAppDispatch();
+
+  const { i18n } = useTranslation();
+
+  const language = useAppSelector((state) => state.languages.language);
+
+  const handleLanguageChange = (lang: string) => {
+    dispatch(setLanugage(lang));
+    localStorage.setItem("interface_language", JSON.stringify(lang));
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <>
       <div className="header-top">
@@ -43,14 +58,20 @@ const HeaderTop: React.FC = () => {
                   <p>
                     <BsGlobeAmericas />
                   </p>
-                  <li className="item">
-                    <a href="#">o'zb</a>
+                  <li className={language === "uz" ? "item active" : "item"}>
+                    <a href="/uz" onClick={() => handleLanguageChange("uz")}>
+                      o'zb
+                    </a>
                   </li>
-                  <li className="item">
-                    <a href="#">рус</a>
+                  <li className={language === "ru" ? "item active" : "item"}>
+                    <a href="/ru" onClick={() => handleLanguageChange("ru")}>
+                      рус
+                    </a>
                   </li>
-                  <li className="item">
-                    <a href="#">qr</a>
+                  <li className={language === "qr" ? "item active" : "item"}>
+                    <a href="/qr" onClick={() => handleLanguageChange("qr")}>
+                      qr
+                    </a>
                   </li>
                 </ul>
               </li>

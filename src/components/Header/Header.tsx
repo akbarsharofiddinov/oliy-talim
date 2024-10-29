@@ -1,30 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import HeaderTop from "./HeaderTop";
 
 import logo from "@/images/logo/logo.png";
 import { FaBars } from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
-import { API } from "@/API";
-import { MySelect } from "..";
+
+import HeaderMenu from "./HeaderMenu";
+import { FaHeadphonesAlt } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
   const [headerBar, setHeaderBar] = useState(false);
-  const [headerMenu, setHeaderMenu] = useState<Menu[]>([]);
 
-  async function getMenus() {
-    try {
-      const response = await API.get("/menus");
-      if (response.status === 200) {
-        setHeaderMenu(response.data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    getMenus();
-  }, []);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -34,44 +22,28 @@ const Header: React.FC = () => {
           <div className="header-inner">
             <a href="/" className="logo">
               <img src={logo} alt="logo" />
-              <p>
-                O‘zbekiston Respublikasi Oliy taʼlim, fan va innovatsiyalar
-                vazirligi
-              </p>
+              <p>{t("logo-title")}</p>
             </a>
-            <ul className={headerBar ? "header-menu bar-view" : "header-menu"}>
-              <button
-                className="header-bar_close"
-                onClick={() => setHeaderBar(false)}
-              >
-                &times;
-              </button>
-              {headerMenu.length ? (
-                <>
-                  {headerMenu.map((menuItem, index) => (
-                    <MySelect
-                      title={menuItem.name_uz}
-                      menu={menuItem.menu_items}
-                      key={index}
-                    />
-                  ))}
-                  <NavLink className="header-menu_link" to={"/news"}>
-                    Yangiliklar
-                  </NavLink>
-                  <NavLink className="header-menu_link" to={"/photos"}>
-                    Foto gallareya
-                  </NavLink>
-                </>
-              ) : (
-                ""
-              )}
-            </ul>
+
+            <div className="right">
+              <div className="phone">
+                <FaHeadphonesAlt />
+                <a href="tel:+998901234567">+998 90 123 45 67</a>
+              </div>
+              <div className="email">
+                <MdOutlineEmail />
+                <a href="meilto:info@jdpu.uz">info@jdpu.uz</a>
+              </div>
+            </div>
+
             <button className="header-bar" onClick={() => setHeaderBar(true)}>
               <FaBars />
             </button>
           </div>
         </div>
       </header>
+
+      <HeaderMenu headerBar={headerBar} setHeaderBar={setHeaderBar} />
     </>
   );
 };

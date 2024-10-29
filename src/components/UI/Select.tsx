@@ -1,5 +1,6 @@
+import { useAppSelector } from "@/store/Hooks/hooks";
 import React from "react";
-import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6";
 
 interface IProps {
   title: string;
@@ -7,6 +8,10 @@ interface IProps {
 }
 
 const Select: React.FC<IProps> = ({ title, menu }) => {
+  const { language } = useAppSelector((state) => state.languages);
+
+  const key = `name_${language}` as keyof MenuItem;
+
   return (
     <>
       <div className="select-item">
@@ -16,13 +21,17 @@ const Select: React.FC<IProps> = ({ title, menu }) => {
             <FaAngleDown />
           </span>
         </div>
-        <ul className="menu">
+        <div className="menu">
           {menu?.map((item, index) => (
-            <li className="menu-item" key={`${index}_${item.id}`}>
-              {item.name_uz}
-            </li>
+            <a
+              href={item.slug === "yangiliklar" ? "/news" : "/"}
+              className="menu-item"
+              key={`${index}_${item.id}`}
+            >
+              {item[key]}
+            </a>
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );

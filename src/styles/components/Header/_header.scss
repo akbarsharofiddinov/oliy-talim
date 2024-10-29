@@ -1,8 +1,10 @@
 @import "./heade-top";
+@import "./header-menu";
 
 header {
   background-color: #fff;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #eee;
+
   padding: 20px 0;
 
   .header-inner {
@@ -14,60 +16,57 @@ header {
       display: flex;
       align-items: center;
       gap: 10px;
-      flex: 20%;
-      color: #000;
+      flex: 40%;
+
+      color: $bs-blue;
       font-weight: 600;
+      font-size: 22px;
+      text-transform: uppercase;
 
       img {
-        width: 68px;
-        height: 68px;
+        width: 80px;
+        height: 80px;
       }
     }
 
-    .header-menu {
+    .right {
       display: flex;
-      align-items: center;
       justify-content: end;
-      z-index: 5;
+      gap: 20px;
 
-      flex: 80%;
+      font-size: 18px;
+      flex: 60%;
+      width: 100%;
 
-      &_link {
-        border-right: 1px solid #ddd;
-        color: $bs-blue;
-        padding: 15px 20px;
+      
 
-        &.active {
-          position: relative;
+      & > div {
+        padding: 20px;
 
-          &::after {
-            content: "";
-            width: 100%;
-            height: 2px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: $bs-orange;
-
-            transition: width 0.4s;
-          }
+        svg {
+          font-size: 30px;
+          color: $bs-blue;
         }
 
-        &:last-child {
-          .select-item {
-            .inner-menu {
-              left: -100%;
-              top: 100%;
-            }
-          }
+        a {
+          color: $bg-blue;
+        }
+
+        &:first-child {
+          border-right: 1px solid #ddd;
+        }
+
+        &.phone,
+        &.email {
+          display: flex;
+          align-items: center;
+          gap: 10px;
         }
       }
     }
+  }
 
-    .header-bar_close,
-    .header-bar {
-      display: none;
-    }
+  .header-bar {
+    display: none;
   }
 }

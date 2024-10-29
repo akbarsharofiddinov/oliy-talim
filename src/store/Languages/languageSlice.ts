@@ -1,11 +1,23 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {};
+interface IState {
+  language: string;
+}
+
+const initialState: IState = {
+  language: "",
+};
 
 export const languageSlice = createSlice({
   name: "languageSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    setLanugage: (state, { payload }: PayloadAction<string>) => {
+      state.language = payload;
+    },
+  },
 });
+
+export const { setLanugage } = languageSlice.actions;
 
 export default languageSlice.reducer;

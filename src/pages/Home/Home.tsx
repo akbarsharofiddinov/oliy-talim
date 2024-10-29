@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Announcements,
   Banner,
@@ -11,8 +11,18 @@ import {
   UseFullLinks,
   VideoGallery,
 } from "@/components";
+import { useNavigate } from "react-router-dom";
+import { useAppSelector } from "@/store/Hooks/hooks";
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+  const lang = useAppSelector((state) => state.languages.language);
+
+  useEffect(() => {
+    if (lang) {
+      navigate(`/${lang}`);
+    }
+  }, []);
   return (
     <>
       <Banner />

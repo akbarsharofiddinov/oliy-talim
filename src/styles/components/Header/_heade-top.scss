@@ -43,6 +43,14 @@
 
         .item {
           border-left: 2px solid #ddd;
+          padding: 5px 0;
+
+          opacity: .6;
+
+          &.active {
+            font-weight: 700;
+            opacity: 1;
+          }
 
           &:nth-child(2) {
             border-left: none !important;
