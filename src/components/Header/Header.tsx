@@ -7,12 +7,11 @@ import { FaBars } from "react-icons/fa6";
 import HeaderMenu from "./HeaderMenu";
 import { FaHeadphonesAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
   const [headerBar, setHeaderBar] = useState(false);
 
-  const { t } = useTranslation();
+  
 
   return (
     <>
