@@ -59,17 +59,17 @@ const HeaderTop: React.FC = () => {
                     <BsGlobeAmericas />
                   </p>
                   <li className={language === "uz" ? "item active" : "item"}>
-                    <a href="/uz" onClick={() => handleLanguageChange("uz")}>
+                    <a href="/" onClick={() => handleLanguageChange("uz")}>
                       o'zb
                     </a>
                   </li>
                   <li className={language === "ru" ? "item active" : "item"}>
-                    <a href="/ru" onClick={() => handleLanguageChange("ru")}>
+                    <a href="/" onClick={() => handleLanguageChange("ru")}>
                       рус
                     </a>
                   </li>
                   <li className={language === "qr" ? "item active" : "item"}>
-                    <a href="/qr" onClick={() => handleLanguageChange("qr")}>
+                    <a href="/" onClick={() => handleLanguageChange("qr")}>
                       qr
                     </a>
                   </li>
